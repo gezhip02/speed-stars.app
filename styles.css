@@ -1,0 +1,800 @@
+/* Global Styles */
+:root {
+    --primary-color: #222;
+    --secondary-color: #444;
+    --accent-color: #ff6b6b;
+    --text-color: #333;
+    --light-text: #fff;
+    --container-width: 1200px;
+    --section-padding: 40px 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--primary-color);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 1rem 20px;
+}
+
+.logo {
+    color: var(--light-text);
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--light-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.nav-right {
+    display: flex;
+    gap: 1rem;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--light-text);
+    transition: 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    padding: 0;
+    text-align: center;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    margin-top: 60px;
+}
+
+.hero-content {
+    padding: 30px 0;
+}
+
+.main-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--secondary-color);
+    line-height: 1.5;
+    padding: 0 20px;
+}
+
+.hero-image {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.racing-banner {
+    max-width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Game Section */
+.game-section {
+    padding: var(--section-padding);
+    background-color: #f9f9f9;
+}
+
+.game-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    margin-bottom: 1.5rem;
+}
+
+.game-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.fullscreen-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.fullscreen-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.share-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.share-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.share-btn:hover {
+    opacity: 0.8;
+}
+
+.twitter { background-color: #1DA1F2; color: white; }
+.facebook { background-color: #4267B2; color: white; }
+.linkedin { background-color: #0077B5; color: white; }
+.reddit { background-color: #FF4500; color: white; }
+.tiktok { background-color: #000000; color: white; }
+
+/* Features Section */
+.features {
+    padding: var(--section-padding);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+/* How to Play Section */
+.how-to-play {
+    padding: var(--section-padding);
+    background-color: #f9f9f9;
+}
+
+.controls-guide {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.controls-guide ul {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.controls-guide li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.controls-guide li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+/* FAQ Section */
+.faq {
+    padding: var(--section-padding);
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.faq-question {
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+.faq-question h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.toggle-icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.toggle-icon::before,
+.toggle-icon::after {
+    content: '';
+    position: absolute;
+    background-color: var(--text-color);
+    transition: transform 0.3s ease;
+}
+
+.toggle-icon::before {
+    width: 2px;
+    height: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.toggle-icon::after {
+    width: 20px;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.faq-item.active .toggle-icon::before {
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.faq-answer {
+    padding: 0 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 1rem;
+    max-height: 200px;
+}
+
+/* Footer */
+footer {
+    padding: var(--section-padding);
+    background-color: var(--primary-color);
+    color: var(--light-text);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: var(--light-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        padding: 1rem 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hero {
+        margin-top: 50px;
+        min-height: 35vh;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .share-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .share-btn {
+        justify-content: center;
+    }
+
+    .main-title {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+    }
+    
+    .hero-description {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    .hero-image {
+        margin-top: 15px;
+    }
+}
+
+/* Visual Divider with Stats */
+.visual-divider {
+    background: linear-gradient(135deg, #222 0%, #444 100%);
+    color: white;
+    padding: 30px 0;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+    flex: 1;
+    min-width: 180px;
+}
+
+.stat-item i {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Game Guides Section */
+.guides {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+.guides h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.guides-preview {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.guides-preview .guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.guides-preview .article-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.guides-preview .article-card:hover {
+    transform: translateY(-5px);
+}
+
+.guides-preview .article-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.guides-preview .article-card-content {
+    padding: 1.5rem;
+}
+
+.guides-preview .article-card h3 {
+    margin: 0 0 1rem;
+    font-size: 1.4rem;
+}
+
+.guides-preview .article-card h3 a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.guides-preview .article-card h3 a:hover {
+    color: #007bff;
+}
+
+.guides-preview .article-card-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.guides-preview .article-card-excerpt {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.guides-preview .read-more {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.guides-preview .read-more:hover {
+    background: #0056b3;
+}
+
+.view-all-guides {
+    text-align: center;
+}
+
+.view-all-guides .btn-primary {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.view-all-guides .btn-primary:hover {
+    background: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .guides-preview .guides-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .guides h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Main Content */
+main {
+    padding-top: 60px;
+}
+
+/* Breadcrumb styles */
+.breadcrumb {
+    padding: 2rem 0 1rem;
+    margin: 0 auto;
+    font-size: 0.95rem;
+    color: #666;
+    max-width: var(--container-width);
+    padding-left: 4rem;
+    padding-right: 4rem;
+    background-color: transparent;
+}
+
+.breadcrumb a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb > span {
+    margin: 0 0.5rem;
+    color: #999;
+}
+
+/* Article Share Section */
+.article-content {
+    margin-bottom: 3rem;
+}
+
+.article-divider {
+    border-top: 1px solid #eee;
+    margin: 3rem 0;
+    width: 100%;
+}
+
+.share-section {
+    margin: 2rem 0 3rem;
+}
+
+.share-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.share-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.5rem;
+    min-width: 150px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    transition: opacity 0.2s ease;
+}
+
+.share-button:hover {
+    opacity: 0.9;
+    color: white;
+    text-decoration: none;
+}
+
+.twitter {
+    background-color: #1DA1F2;
+}
+
+.facebook {
+    background-color: #4267B2;
+}
+
+.linkedin {
+    background-color: #0077B5;
+}
+
+.reddit {
+    background-color: #FF4500;
+}
+
+/* Related Articles Section */
+.related-articles {
+    margin: 4rem 0;
+}
+
+.related-articles h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: #333;
+}
+
+.related-articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.related-article-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.related-article-card:hover {
+    transform: translateY(-5px);
+}
+
+.related-article-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.related-article-content {
+    padding: 1.5rem;
+}
+
+.related-article-content h3 {
+    margin: 0 0 0.8rem;
+    font-size: 1.3rem;
+}
+
+.related-article-content h3 a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.related-article-content h3 a:hover {
+    color: #0066cc;
+}
+
+.related-article-date {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.back-to-home {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.back-to-home a {
+    display: inline-flex;
+    align-items: center;
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.back-to-home a:hover {
+    color: #004499;
+}
+
+.back-to-home a i {
+    margin-right: 0.5rem;
+} 
